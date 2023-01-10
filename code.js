@@ -12,3 +12,9 @@
     $(this).addClass("active");
   });
 })(jQuery);
+//  = document.querySelector("");
+// const nav = document.querySelector("#nav-bar");
+function openNav() {
+  const slide = document.querySelector("#nav-bar");
+  slide.classList.toggle("nav-slide-up");
+}

@@ -23,6 +23,9 @@ body {
   background-color: #f7ca18;
   color: #1b1b1b;
 }
+.hamburger {
+  display: none;
+}
 nav {
   width: 100%;
   background-color: #0b0b0b;
@@ -40,21 +43,17 @@ nav ul {
   margin: 0;
   width: 100%;
   display: flex;
+  min-width: 800px;
   justify-content: space-between;
 }
-@media screen and (max-width: 720px) {
-  nav ul {
-    overflow-y: scroll;
-    color: red;
-  }
-}
+
 nav li {
   margin: 0;
 
   height: 98px;
   margin-bottom: 2px;
   line-height: 100px;
-
+  flex-basis: 25vw;
   text-align: center;
   color: #555;
   transition: background-color 0.5s 0.2s ease, color 0.3s ease;
@@ -128,6 +127,9 @@ nav li:nth-child(7):hover ~ .slide {
 }
 nav li.slide {
   position: absolute;
+  width: 20vw;
+
+  text-align: center;
   left: -20vw;
   top: 0;
   background-color: #fff;
@@ -154,10 +156,13 @@ section .title {
 
   /* flex-basis: 70%; */
 }
-section .title :is(span, p) {
+.title h1 {
+  font-size: 50px;
+}
+section .title :is(h1, p) {
   /* display: inline-block; */
   display: block;
-  font-size: 5vw;
+
   color: #efefef;
   width: 100%;
   text-transform: uppercase;
@@ -170,14 +175,14 @@ section .title p {
   font-size: 1rem;
   animation: byBottom 1s 0.25s ease both;
 }
-section .title p a {
+.yel-uline {
   position: relative;
   display: inline-block;
   margin-left: 0.5rem;
   text-decoration: none;
   color: #f7ca18;
 }
-section .title p a::after {
+a.yel-uline::after {
   content: "";
   height: 2px;
   background-color: #f7ca18;
@@ -283,3 +288,60 @@ section .title p a::after {
     width: 30px;
   }
 }
+@media screen and (max-width: 900px) {
+  nav ul {
+    flex-direction: column;
+
+    min-width: unset;
+  }
+  nav li {
+    height: auto;
+    line-height: 40px;
+    text-align: left;
+    flex-basis: content;
+  }
+  nav li a {
+    padding-left: 10px;
+  }
+  nav {
+    height: 150px;
+    overflow-y: auto;
+  }
+  .nav-slide-down {
+    transform: translateY(230px);
+    transition: transform 0.3s ease-in-out;
+    backface-visibility: hidden;
+  }
+  .nav-slide-up {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+    backface-visibility: hidden;
+  }
+  nav li.slide {
+    display: none;
+  }
+  .title {
+    transform: translateY(-37px);
+  }
+  section {
+    height: 100vh;
+  }
+  .hamburger {
+    display: inline-block;
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .yel-uline {
+    margin-left: 0;
+    display: block;
+  }
+  .title h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 380px) or (max-height: 720px) {
+  nav {
+  }
+} ;

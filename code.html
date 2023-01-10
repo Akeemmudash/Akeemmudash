@@ -6,27 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 02</title>
     <link rel="stylesheet" href="code.css" />
-  </head>
-  <body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <head>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
       <script src="code.js"></script>
     </head>
-    <nav>
-      <ul>
-        <li><a href="Salfia.co">Home</a></li>
-        <li>About me</li>
-        <li>Portfolio</li>
-        <li>Blog</li>
-        <li>Contact me</li>
-        <li class="slide"></li>
-      </ul>
-    </nav>
-    <section>
-      <div class="title">
-        <span>Akeem Mudashiru</span>
-        <p>Graphic Designer and<a target="_blank" href="#">Web Developer</a></p>
-      </div>
-    </section>
-  </body>
+    <body>
+      <header>
+        <a
+          href="javascript:void(0);"
+          class="icon hamburger"
+          onclick="openNav()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+
+        <nav id="nav-bar" class="nav-slide-down">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact me</a></li>
+            <li class="slide"></li>
+          </ul>
+        </nav>
+      </header>
+      <section id="sectn">
+        <div class="title">
+          <h1>Akeem Mudashiru</h1>
+          <p>
+            Graphic Designer and<a target="_blank" href="#" class="yel-uline"
+              >Web Developer</a
+            >
+          </p>
+        </div>
+      </section>
+    </body>
+  </head>
 </html>
